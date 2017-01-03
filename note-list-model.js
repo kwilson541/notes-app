@@ -13,5 +13,6 @@ function NoteList(){
   };
 
   exports.addNote = this.addNote;
+  exports.showNotes = this.showNotes;
 
 })(this);
