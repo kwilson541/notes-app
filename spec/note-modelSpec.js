@@ -6,3 +6,10 @@ function testNoteText(){
 }
 
 testNoteText();
+
+function returnNoteText(){
+  var note = new Note("This is another note");
+  assert.isTrue(note.viewText() === "This is another note")
+}
+
+returnNoteText();
