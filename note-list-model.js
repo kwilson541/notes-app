@@ -12,7 +12,13 @@ function NoteList(){
     return this._notes;
   };
 
+  NoteList.prototype.createNote = function(string){
+    var note = new Note(string);
+    this.addNote(note);
+  };
+
   exports.addNote = this.addNote;
   exports.showNotes = this.showNotes;
+  exports.createNote = this.createNote;
 
 })(this);
