@@ -2,6 +2,12 @@ function Note(string){
   this._text = string;
 }
 
-Note.prototype.returnNoteText = function() {
-  return this._text;
-};
+(function(exports) {
+
+  Note.prototype.returnNoteText = function() {
+    return this._text;
+  };
+
+  exports.returnNoteText = this.returnNoteText;
+
+})(this);
