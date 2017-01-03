@@ -11,7 +11,7 @@
 	}
 
 	NoteList.prototype.createNote = function(text){
-		note = new Note(text)
+		var note = new Note(text)
 		this.list.push(note)
 	}
 
