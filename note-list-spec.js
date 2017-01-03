@@ -13,6 +13,6 @@ testNoteListContainsNote();
 function testReturnListOfNotes() {
   var noteList = new NoteList();
   noteList.addNote(note);
-  assert.isTrue(noteList.returnNotes().includes(note));
+  assert.isTrue(noteList.showNotes().includes(note));
 };
 testReturnListOfNotes();
