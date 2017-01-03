@@ -9,3 +9,10 @@ function testNoteListContainsNote() {
   assert.isTrue(noteList._notes[0] === note);
 };
 testNoteListContainsNote();
+
+function testReturnListOfNotes() {
+  var noteList = new NoteList();
+  noteList.addNote(note);
+  assert.isTrue(noteList.returnNotes().includes(note));
+};
+testReturnListOfNotes();
