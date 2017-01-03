@@ -6,3 +6,12 @@ function testNoteList(){
 }
 
 testNoteList();
+
+function testNoteListStore(){
+	var noteList = new NoteList();
+	var note = new Note();
+	noteList.list.push(note);
+	assert.isTrue(noteList.list[0] === note)
+}
+
+testNoteListStore();
