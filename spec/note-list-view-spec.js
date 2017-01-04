@@ -8,6 +8,11 @@ note2.returnNoteText = function(){
   return "A secondouble note";
 };
 
+long_note = {};
+long_note.returnNoteText = function(){
+  return "Is this overreaching arm, or is it compassion? Is this handout undeserved or just reparation?";
+};
+
 noteList = {};
 noteList.showNotes = function(){
   return [note];
@@ -21,6 +26,11 @@ noteList2.showNotes = function(){
 noteList3 = {};
 noteList3.showNotes = function(){
   return [];
+};
+
+noteList_4 = {};
+noteList_4.showNotes = function(){
+  return [long_note];
 };
 
 function testInstantiatesWithNoteList(){
@@ -46,3 +56,8 @@ function testEmptyListNotes(){
   assert.isTrue(noteListView.listNotes() === "<ul></ul>");
 };
 testMultipleListNotes();
+
+function testShowingOnlyFirstCharacters(){
+  var noteListView = new NoteListView(noteList_4);
+  assert.isTrue(noteListView.listNotes() === "<ul><li><div>Is this overreachin</div></li></ul>")
+}

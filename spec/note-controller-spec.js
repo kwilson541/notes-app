@@ -22,6 +22,6 @@ function testUpdateHTML() {
   app.id = "app";
   document.body.appendChild(app);
   controller.updateHTML("app");
-  assert.isTrue(app.innerHTML === "<ul><li><div>Favourite drink: margarita</div></li></ul>")
+  assert.isTrue(app.innerHTML === "<ul><li><div>Favourite drink: ma</div></li></ul>")
 }
 testUpdateHTML();
