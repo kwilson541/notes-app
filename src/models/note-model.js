@@ -1,13 +1,13 @@
-function Note(string){
-  this._text = string;
-}
-
 (function(exports) {
 
-  Note.prototype.returnNoteText = function() {
-    return this._text;
-  };
+	function Note(string){
+	  this._text = string;
+	}
 
-  exports.returnNoteText = this.returnNoteText;
+	Note.prototype.returnNoteText = function() {
+		return this._text;
+	};
+
+	exports.Note = Note;
 
 })(this);

@@ -1,9 +1,9 @@
-function NoteListView(noteList){
-  this._noteList = noteList;
-}
-
 (function(exports) {
 
+  function NoteListView(noteList){
+    this._noteList = noteList;
+  }
+  
   NoteListView.prototype.listNotes = function(){
     notes = "<ul>";
     this._noteList.showNotes().forEach(function(element){
@@ -13,6 +13,6 @@ function NoteListView(noteList){
     return notes;
   };
 
-  exports.listNotes = this.listNotes;
+  exports.NoteListView = NoteListView;
 
 })(this);
