@@ -33,31 +33,27 @@ noteList_4.showNotes = function(){
   return [long_note];
 };
 
-function testInstantiatesWithNoteList(){
+(function testInstantiatesWithNoteList(){
   var noteListView = new NoteListView(noteList);
   assert.isTrue(noteListView._noteList === noteList);
-};
-testInstantiatesWithNoteList();
+})();
 
-function testListNotes(){
+(function testListNotes(){
   var noteListView = new NoteListView(noteList);
   assert.isTrue(noteListView.listNotes() === "<ul><li><div>A doubled note</div></li></ul>");
-};
-testListNotes();
+})();
 
-function testMultipleListNotes(){
+(function testMultipleListNotes(){
   var noteListView = new NoteListView(noteList2);
   assert.isTrue(noteListView.listNotes() === "<ul><li><div>A doubled note</div></li><li><div>A secondouble note</div></li></ul>");
-};
-testMultipleListNotes();
+})();
 
-function testEmptyListNotes(){
+(function testEmptyListNotes(){
   var noteListView = new NoteListView(noteList3);
   assert.isTrue(noteListView.listNotes() === "<ul></ul>");
-};
-testMultipleListNotes();
+})();
 
-function testShowingOnlyFirstCharacters(){
+(function testShowingOnlyFirstCharacters(){
   var noteListView = new NoteListView(noteList_4);
   assert.isTrue(noteListView.listNotes() === "<ul><li><div>Is this overreachin</div></li></ul>")
-}
+})();

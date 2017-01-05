@@ -8,13 +8,12 @@ noteList.showNotes = function(){
   return [note];
 };
 
-function testInstantiateNoteController() {
+(function testInstantiateNoteController() {
   var controller = new NoteController(noteList);
   assert.isTrue(typeof controller === "object")
-};
-testInstantiateNoteController();
+})();
 
-function testUpdateHTML() {
+(function testUpdateHTML() {
   var controller = new NoteController(noteList);
 
   controller.addNoteListView();
@@ -23,5 +22,4 @@ function testUpdateHTML() {
   document.body.appendChild(app);
   controller.updateHTML("app");
   assert.isTrue(app.innerHTML === "<ul><li><div>Favourite drink: ma</div></li></ul>")
-}
-testUpdateHTML();
+})();
