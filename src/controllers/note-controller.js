@@ -47,6 +47,7 @@
       .getElementById("new-note-form")
       .addEventListener("submit", function(submitEvent) {
         console.log(submitEvent);
+        console.log(submitEvent.srcElement[0].value);
         submitEvent.preventDefault()
       });
   };
