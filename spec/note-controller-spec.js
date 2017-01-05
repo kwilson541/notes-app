@@ -2,6 +2,9 @@ note = {};
 note.returnNoteText = function(){
   return "Favourite drink: margarita";
 };
+note.returnNoteId = function(){
+  return 0;
+};
 
 noteList = {};
 noteList.showNotes = function(){
@@ -21,5 +24,5 @@ noteList.showNotes = function(){
   app.id = "app";
   document.body.appendChild(app);
   controller.updateHTML("app");
-  assert.isTrue(app.innerHTML === "<ul><li><div>Favourite drink: ma</div></li></ul>")
+  assert.isTrue(app.innerHTML === '<ul><li><div><a href="" id="0">Favourite drink: ma</a></div></li></ul>')
 })();

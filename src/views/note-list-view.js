@@ -5,15 +5,15 @@
   }
 
   NoteListView.prototype.listNotes = function(){
-    notes = "<ul>";
+    notes = '<ul>';
     this._noteList.showNotes().forEach(function(element){
       if(element.returnNoteText().length > 20){
-        notes += "<li><div>" + element.returnNoteText().substr(0, 19) + "</div></li>";
+        notes += '<li><div><a href="" id="' + element.returnNoteId() + '">' + element.returnNoteText().substr(0, 19) + '</a></div></li>';
       } else {
-        notes += "<li><div>" + element.returnNoteText() + "</div></li>";
+        notes += '<li><div><a href="" id="' + element.returnNoteId() + '">' + element.returnNoteText() + '</a></div></li>';
       }
     });
-    notes += "</ul>";
+    notes += '</ul>';
     return notes;
   };
 
