@@ -24,5 +24,5 @@ noteList.showNotes = function(){
   app.id = "app";
   document.body.appendChild(app);
   controller.updateHTML("app");
-  assert.isTrue(app.innerHTML === '<ul><li><div><a href="" id="0">Favourite drink: ma</a></div></li></ul>')
+  assert.isTrue(app.innerHTML === '<ul><li><div><a href="#0">Favourite drink: ma</a></div></li></ul>')
 })();
