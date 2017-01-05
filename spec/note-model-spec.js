@@ -7,3 +7,8 @@
   var note = new Note("test", 0);
   assert.isTrue(note.returnNoteText() === note._text)
 })();
+
+(function testReturnNoteId() {
+	var note = new Note("test", 0);
+	assert.isTrue(note.returnNoteId() === 0)
+})();
