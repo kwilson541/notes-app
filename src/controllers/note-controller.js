@@ -42,6 +42,15 @@
     .innerHTML = note.viewNote();
   };
 
+  NoteController.prototype.submitListener = function(){
+    document
+      .getElementById("new-note-form")
+      .addEventListener("submit", function(submitEvent) {
+        console.log(submitEvent);
+        submitEvent.preventDefault()
+      });
+  };
+
   exports.NoteController = NoteController;
 
 })(this);
