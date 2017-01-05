@@ -31,7 +31,7 @@
   };
 
   NoteController.prototype.findNote = function(id){
-    note = this._noteList._notes[id];
+    note = this._noteList.showNotes()[id];
     singleNoteView = new SingleNoteView(note)
     this.showNote(singleNoteView);
   };
