@@ -5,3 +5,4 @@ noteController.addNoteListView();
 noteController.updateHTML("app");
 
 noteController.makeURLChangeShowNoteInCurrentPage();
+noteController.submitListener();
